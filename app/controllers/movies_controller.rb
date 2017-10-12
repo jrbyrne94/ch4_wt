@@ -16,4 +16,9 @@ class MoviesController < ApplicationController
     params.require(:movie).permit(:title, :rating, :description, :release_date)
   end
   
+  def new
+    @movie = Movie.new
+    # default: render 'new' template
+  end 
+  
 end
